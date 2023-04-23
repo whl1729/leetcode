@@ -6,4 +6,4 @@
 
 - 2023-04-22：[1041. 困于环中的机器人][1041]
 
-  1041: https://leetcode.cn/problems/robot-bounded-in-circle/
+  [1041]: https://leetcode.cn/problems/robot-bounded-in-circle/
