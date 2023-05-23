@@ -18,7 +18,7 @@ class KthLargest(object):
         :rtype: int
         """
         index = self._search(val)
-        if index >= self._len:
+        if index == self._len:
             return self._nums[-1]
         for i in range(self._len - 1, index, -1):
             self._nums[i] = self._nums[i - 1]
@@ -30,10 +30,16 @@ class KthLargest(object):
         :type val: int
         :rtype: int
         """
-        for i in range(0, self._len):
-            if val > self._nums[i]:
-                return i
-        return self._len
+        target = self._len
+        left, right = 0, self._len - 1
+        while left <= right:
+            mid = int((left + right) / 2)
+            if val >= self._nums[mid]:
+                target = mid
+                right = mid - 1
+            else:
+                left = mid + 1
+        return target
 
 
 if __name__ == "__main__":
@@ -52,3 +58,11 @@ if __name__ == "__main__":
     assert kthLargest.add(10) == 4
     assert kthLargest.add(9) == 5
     assert kthLargest.add(4) == 5
+
+    # case 2
+    kthLargest = KthLargest(1, [4, 5, 8, 2])
+    assert kthLargest.add(3) == 8
+    assert kthLargest.add(5) == 8
+    assert kthLargest.add(10) == 10
+    assert kthLargest.add(9) == 10
+    assert kthLargest.add(4) == 10
