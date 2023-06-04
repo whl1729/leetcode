@@ -4,6 +4,9 @@
 
 ## 刷题记录
 
+- 2023-06-04: [2718. Sum of Matrix After Queries][2718] (medium)
+- 2023-06-04: [2717. Semi-Ordered Permutation][2717] (easy)
+- 2023-06-04: [2716. Minimize String Length][2716] (easy)
 - 2023-05-30 ~ 2023-06-03: [2712. Minimum Cost to Make All Characters Equal][2712] (medium)
 - 2023-05-29: [2711. Difference of Number of Distinct Values on Diagonals][2711] (medium)
 - 2023-05-29: [2710. Remove Trailing Zeros From a String][2710] (too easy)
@@ -12,6 +15,14 @@
 - 2023-05-09: [1419. Minimum Number of Frogs Croaking][1419] (medium)
 - 2023-04-22：[1041. Robot Bounded In Circle][1041] (medium)
 
+## 未解决的问题
+
+- 2023-06-04：[2719. Count of Integers][2719] (hard)
+
+  [2719]: https://leetcode.com/contest/weekly-contest-348/problems/count-of-integers/
+  [2718]: https://leetcode.com/contest/weekly-contest-348/problems/sum-of-matrix-after-queries/
+  [2717]: https://leetcode.com/contest/weekly-contest-348/problems/semi-ordered-permutation/
+  [2716]: https://leetcode.com/contest/weekly-contest-348/problems/minimize-string-length/
   [2712]: https://leetcode.com/contest/weekly-contest-347/problems/minimum-cost-to-make-all-characters-equal/
   [2711]: https://leetcode.com/contest/weekly-contest-347/problems/difference-of-number-of-distinct-values-on-diagonals/
   [2710]: https://leetcode.com/contest/weekly-contest-347/problems/remove-trailing-zeros-from-a-string/
