@@ -4,6 +4,7 @@
 
 ## 刷题记录
 
+- 2023-06-11: [2734. Lexicographically Smallest String After Substring Operation][2734] (medium)
 - 2023-06-11: [2733. Neither Minimum nor Maximum][2733] (too easy)
 - 2023-06-04: [2718. Sum of Matrix After Queries][2718] (medium)
 - 2023-06-04: [2717. Semi-Ordered Permutation][2717] (easy)
@@ -20,6 +21,7 @@
 
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
+  [2734]: https://leetcode.com/contest/weekly-contest-349/problems/lexicographically-smallest-string-after-substring-operation/
   [2733]: https://leetcode.com/contest/weekly-contest-349/problems/neither-minimum-nor-maximum/
   [2719]: https://leetcode.com/contest/weekly-contest-348/problems/count-of-integers/
   [2718]: https://leetcode.com/contest/weekly-contest-348/problems/sum-of-matrix-after-queries/
