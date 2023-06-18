@@ -4,6 +4,8 @@
 
 ## 刷题记录
 
+- 2023-06-18: [6890. Find the Value of the Partition][6890] (medium)
+- 2023-06-18: [6901. Total Distance Traveled][6901] (easy)
 - 2023-06-11: [2734. Lexicographically Smallest String After Substring Operation][2734] (medium)
 - 2023-06-11: [2733. Neither Minimum nor Maximum][2733] (too easy)
 - 2023-06-04: [2718. Sum of Matrix After Queries][2718] (medium)
@@ -19,6 +21,7 @@
 
 ## 未解决的问题
 
+- 2023-06-18: [6893. Special Permutations][6893] (medium)
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
   [2734]: https://leetcode.com/contest/weekly-contest-349/problems/lexicographically-smallest-string-after-substring-operation/
