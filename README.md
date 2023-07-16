@@ -4,9 +4,11 @@
 
 ## 刷题记录
 
+- 2023-07-16: [2779. Maximum Beauty of an Array After Applying Operation][2779]
+- 2023-07-16: [6889. Sum of Squares of Special Elements][6889] (easy)
 - 2023-07-05: [2760. Longest Even Odd Subarray With Threshold][2760] (easy)
-- 2023-06-18: [6890. Find the Value of the Partition][6890] (medium)
-- 2023-06-18: [6901. Total Distance Traveled][6901] (easy)
+- 2023-06-18: [2740. Find the Value of the Partition][2740] (medium)
+- 2023-06-18: [2739. Total Distance Traveled][2739] (easy)
 - 2023-06-11: [2734. Lexicographically Smallest String After Substring Operation][2734] (medium)
 - 2023-06-11: [2733. Neither Minimum nor Maximum][2733] (too easy)
 - 2023-06-04: [2718. Sum of Matrix After Queries][2718] (medium)
@@ -22,10 +24,15 @@
 
 ## 未解决的问题
 
-- 2023-06-18: [6893. Special Permutations][6893] (medium)
+- 2023-06-18: [2741. Special Permutations][2741] (medium)
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
+  [6889]: https://leetcode.com/contest/weekly-contest-354/problems/sum-of-squares-of-special-elements/
+  [2779]: https://leetcode.com/contest/weekly-contest-354/problems/maximum-beauty-of-an-array-after-applying-operation/
   [2760]: https://leetcode.com/contest/weekly-contest-352/problems/longest-even-odd-subarray-with-threshold/
+  [2741]: https://leetcode.com/contest/weekly-contest-350/problems/special-permutations/
+  [2740]: https://leetcode.com/contest/weekly-contest-350/problems/find-the-value-of-the-partition/
+  [2739]: https://leetcode.com/contest/weekly-contest-350/problems/total-distance-traveled/
   [2734]: https://leetcode.com/contest/weekly-contest-349/problems/lexicographically-smallest-string-after-substring-operation/
   [2733]: https://leetcode.com/contest/weekly-contest-349/problems/neither-minimum-nor-maximum/
   [2719]: https://leetcode.com/contest/weekly-contest-348/problems/count-of-integers/

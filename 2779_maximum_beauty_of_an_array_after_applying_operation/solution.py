@@ -16,16 +16,26 @@ class Solution(object):
         beauty = 1
         size = len(nums)
         for i in range(size):
-            end = self.find_no_more_than(nums, i+beauty, size, nums[i]+delta)
+            end = self.find_first_more_than(nums, i+beauty, size, nums[i]+delta)
             if end - i > beauty:
                 beauty = end - i
         return beauty
 
-    # find the maximum index starting with `start` whose value is no more than target
-    def find_no_more_than(self, nums, start, end, target):
-        for i in range(start, end):
-            if nums[i] > target:
-                return i
+    # find the first index starting with `start` whose element is more than target
+    def find_first_more_than(self, nums, start, end, target):
+        if start >= end:
+            return end
+
+        left = start
+        right = end-1
+        while left <= right:
+            if nums[left] > target:
+                return left
+            mid = (left + right) // 2
+            if nums[mid] <= target:
+                left = mid + 1
+            else:
+                right = mid
         return end
 
 if __name__ == "__main__":
@@ -34,3 +44,4 @@ if __name__ == "__main__":
     assert solution.maximumBeauty([1,1,1,1], 10) == 4
     assert solution.maximumBeauty([1,2,3,4], 0) == 1
     assert solution.maximumBeauty([1,7,11,12], 1) == 2
+    assert solution.maximumBeauty([75, 15, 9], 28) == 2
