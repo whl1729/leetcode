@@ -4,6 +4,8 @@
 
 ## 刷题记录
 
+- 2023-07-23: [6915. Largest Element in an Array after Merge Operations][6915]
+- 2023-07-23: [6921. Split Strings by Separator][6921]
 - 2023-07-16: [2779. Maximum Beauty of an Array After Applying Operation][2779]
 - 2023-07-16: [6889. Sum of Squares of Special Elements][6889] (easy)
 - 2023-07-05: [2760. Longest Even Odd Subarray With Threshold][2760] (easy)
@@ -27,6 +29,8 @@
 - 2023-06-18: [2741. Special Permutations][2741] (medium)
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
+  [6915]: https://leetcode.com/contest/weekly-contest-355/problems/largest-element-in-an-array-after-merge-operations/
+  [6921]: https://leetcode.com/contest/weekly-contest-355/problems/split-strings-by-separator/
   [6889]: https://leetcode.com/contest/weekly-contest-354/problems/sum-of-squares-of-special-elements/
   [2779]: https://leetcode.com/contest/weekly-contest-354/problems/maximum-beauty-of-an-array-after-applying-operation/
   [2760]: https://leetcode.com/contest/weekly-contest-352/problems/longest-even-odd-subarray-with-threshold/
