@@ -4,7 +4,6 @@
 
 ## 刷题记录
 
-- 2023-08-06: [6953. Check if it is Possible to Split Array][6953] (medium)（Wrong answer）
 - 2023-08-06: [6925. Faulty Keyboard][6925] (easy)
 - 2023-07-23: [6915. Largest Element in an Array after Merge Operations][6915]
 - 2023-07-23: [6921. Split Strings by Separator][6921]
@@ -28,6 +27,7 @@
 
 ## 未解决的问题
 
+- 2023-08-06: [6953. Check if it is Possible to Split Array][6953] (medium)（Wrong answer）
 - 2023-06-18: [2741. Special Permutations][2741] (medium)
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
