@@ -4,6 +4,8 @@
 
 ## 刷题记录
 
+- 2023-08-06: [6953. Check if it is Possible to Split Array][6953] (medium)（Wrong answer）
+- 2023-08-06: [6925. Faulty Keyboard][6925] (easy)
 - 2023-07-23: [6915. Largest Element in an Array after Merge Operations][6915]
 - 2023-07-23: [6921. Split Strings by Separator][6921]
 - 2023-07-16: [2779. Maximum Beauty of an Array After Applying Operation][2779]
@@ -29,6 +31,8 @@
 - 2023-06-18: [2741. Special Permutations][2741] (medium)
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
+  [6953]: https://leetcode.com/contest/weekly-contest-357/problems/check-if-it-is-possible-to-split-array/
+  [6925]: https://leetcode.com/contest/weekly-contest-357/problems/faulty-keyboard/
   [6915]: https://leetcode.com/contest/weekly-contest-355/problems/largest-element-in-an-array-after-merge-operations/
   [6921]: https://leetcode.com/contest/weekly-contest-355/problems/split-strings-by-separator/
   [6889]: https://leetcode.com/contest/weekly-contest-354/problems/sum-of-squares-of-special-elements/
