@@ -4,6 +4,8 @@
 
 ## 刷题记录
 
+- 2023-08-20: [6450. Determine the Minimum Sum of a k-avoiding Array][6450]
+- 2023-08-20: [7004. Check if a String Is an Acronym of Words][7004]
 - 2023-08-06: [6925. Faulty Keyboard][6925] (easy)
 - 2023-07-23: [6915. Largest Element in an Array after Merge Operations][6915]
 - 2023-07-23: [6921. Split Strings by Separator][6921]
@@ -31,6 +33,8 @@
 - 2023-06-18: [2741. Special Permutations][2741] (medium)
 - 2023-06-04：[2719. Count of Integers][2719] (hard)
 
+  [6450]: https://leetcode.com/contest/weekly-contest-359/problems/determine-the-minimum-sum-of-a-k-avoiding-array/
+  [7004]: https://leetcode.com/contest/weekly-contest-359/problems/check-if-a-string-is-an-acronym-of-words/
   [6953]: https://leetcode.com/contest/weekly-contest-357/problems/check-if-it-is-possible-to-split-array/
   [6925]: https://leetcode.com/contest/weekly-contest-357/problems/faulty-keyboard/
   [6915]: https://leetcode.com/contest/weekly-contest-355/problems/largest-element-in-an-array-after-merge-operations/
