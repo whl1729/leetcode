@@ -4,6 +4,12 @@
 
 ## 刷题记录
 
+### 2024 年 LeetCode 75 刷题记录
+
+- 2024-04-07: [1768. Merge Strings Alternately][1768]
+
+### 2023 年刷题记录
+
 - 2023-08-20: [6450. Determine the Minimum Sum of a k-avoiding Array][6450]
 - 2023-08-20: [7004. Check if a String Is an Acronym of Words][7004]
 - 2023-08-06: [6925. Faulty Keyboard][6925] (easy)
@@ -55,6 +61,7 @@
   [2711]: https://leetcode.com/contest/weekly-contest-347/problems/difference-of-number-of-distinct-values-on-diagonals/
   [2710]: https://leetcode.com/contest/weekly-contest-347/problems/remove-trailing-zeros-from-a-string/
   [703]: https://leetcode.com/problems/kth-largest-element-in-a-stream/
+  [1768]: https://leetcode.com/problems/merge-strings-alternately/description/
   [1557]: https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
   [1419]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/
   [1041]: https://leetcode.com/problems/robot-bounded-in-circle/
