@@ -6,6 +6,7 @@
 
 ### 2024 年 LeetCode 75 刷题记录
 
+- 2024-04-10: [1071. Greatest Common Divisor of Strings][1071]
 - 2024-04-07: [1768. Merge Strings Alternately][1768]
 
 ### 2023 年刷题记录
@@ -64,4 +65,5 @@
   [1768]: https://leetcode.com/problems/merge-strings-alternately/description/
   [1557]: https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
   [1419]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/
+  [1071]: https://leetcode.com/problems/greatest-common-divisor-of-strings/
   [1041]: https://leetcode.com/problems/robot-bounded-in-circle/
