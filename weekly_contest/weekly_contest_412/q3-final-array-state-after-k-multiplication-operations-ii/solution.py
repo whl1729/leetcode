@@ -43,16 +43,10 @@ class Solution:
             return nums
 
         items = self.sort_nums(nums, multiplier)
-        # print(f'items: {items}')
-        diffs = self.calc_diffs(items)
-        # print(f'diffs: {diffs}')
-        self.operates(items, diffs, k)
-        # print(f'operated items: {items}')
+        self.operates(items, k)
         items.sort(key=lambda x: x.index)
-        # print(f'sorted items: {items}')
 
         final_state = [modular_pow(num, multiplier, items[i].count, DIVISOR) for i, num in enumerate(nums)]
-        # print(f'final_state: {final_state}')
         return final_state
 
     def sort_nums(self, nums: List[int], multiplier: int) -> List[Item]:
@@ -61,25 +55,13 @@ class Solution:
         items.sort(key=lambda x: x.log)
         return items
 
-    def calc_diffs(self, items: List[Item]) -> List[List[int]]:
-        """计算任意两个 item 之间的对数值的差异，并向上取整"""
+    def operates(self, items: List[Item], k: int) -> None:
         length = len(items)
-        diffs = [[0 for _ in range(length)] for _ in range(length)]
-        for i in range(length):
-            for j in range(i+1, length):
-                diffs[i][j] = math.ceil(items[j].log - items[i].log)
-
-        return diffs
-        
-    def operates(self, items: List[Item], diffs: List[List[int]], k: int) -> None:
-        length = len(diffs)
-        round, left = self.calc_round(diffs, k, length)
-        # print(f'round={round}, left={left}')
+        round, left = self.calc_round(items, k, length)
         q, r = left // round, left % round
         for i in range(round):
-            items[i].count = diffs[i][round-1] + q
+            items[i].count = math.ceil(items[round-1].log - items[i].log) + q
             items[i].log += items[i].count
-        # print(f'after round, items: {items}')
 
         allocated_items = items[:round]
         allocated_items.sort(key=lambda x: x.index)
@@ -89,11 +71,11 @@ class Solution:
             allocated_items[i].count += 1
             allocated_items[i].log += 1
 
-    def calc_round(self, diffs: List[List[int]], k: int, length: int) -> Tuple[int, int]:
+    def calc_round(self, items: List[Item], k: int, length: int) -> Tuple[int, int]:
         """计算能够进行几轮分配"""
         last_allocated = 0
         for round in range(1, length):
-            cur_allocated = sum(d[round] for d in diffs)
+            cur_allocated = sum([math.ceil(items[round].log - items[i].log) for i in range(round)])
             if cur_allocated > k:
                 return round, (k - last_allocated)
             last_allocated = cur_allocated
