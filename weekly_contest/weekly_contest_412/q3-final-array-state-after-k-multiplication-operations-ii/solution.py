@@ -63,9 +63,11 @@ class Solution:
             items[i].count = math.ceil(items[round-1].log - items[i].log) + q
             items[i].log += items[i].count
 
+        print(f'after round, q: {q}, r: {r}, items: {items}')
         allocated_items = items[:round]
         allocated_items.sort(key=lambda x: x.index)
         allocated_items.sort(key=lambda x: x.log)
+        print(f'after sort, items: {items}')
 
         for i in range(r):
             allocated_items[i].count += 1
@@ -96,3 +98,10 @@ if __name__ == "__main__":
     multiplier = 1000000
     result = s.getFinalState(nums, k, multiplier)
     assert result == [999999307,999999993]
+
+    nums = [3,9,27,81,243,729,2187,6561,19683,59049,177147,531441,1594323,4782969,14348907,43046721,129140163,387420489]
+    k = 1000000000
+    multiplier = 3
+    result = s.getFinalState(nums, k, multiplier)
+    print('result:', result)
+    assert result == [869770420,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809]
