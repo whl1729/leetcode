@@ -51,7 +51,7 @@ class Solution:
 
     def sort_nums(self, nums: List[int], multiplier: int) -> List[Item]:
         """将 int 数组转化为 item 数组再排序，以保留数组下标信息"""
-        items = [Item(index=i, log=math.log(num, multiplier), count=0) for i, num in enumerate(nums)]
+        items = [Item(index=i, log=round(math.log(num, multiplier), 10), count=0) for i, num in enumerate(nums)]
         items.sort(key=lambda x: x.log)
         return items
 
@@ -63,30 +63,44 @@ class Solution:
             items[i].count = math.ceil(items[round-1].log - items[i].log) + q
             items[i].log += items[i].count
 
-        print(f'after round, q: {q}, r: {r}, items: {items}')
         allocated_items = items[:round]
         allocated_items.sort(key=lambda x: x.index)
         allocated_items.sort(key=lambda x: x.log)
-        print(f'after sort, items: {items}')
 
         for i in range(r):
             allocated_items[i].count += 1
             allocated_items[i].log += 1
 
     def calc_round(self, items: List[Item], k: int, length: int) -> Tuple[int, int]:
-        """计算能够进行几轮分配"""
-        last_allocated = 0
-        for round in range(1, length):
-            cur_allocated = sum([math.ceil(items[round].log - items[i].log) for i in range(round)])
-            if cur_allocated > k:
-                return round, (k - last_allocated)
-            last_allocated = cur_allocated
+        """计算能够进行几轮分配，返回的 round 代表前 round 个元素已经相差小于1"""
+        operation_count = lambda round: sum([math.ceil(items[round].log - items[i].log) for i in range(round)])
+        # 使用二分搜索
+        left = 1
+        right = length - 1
+        while left <= right:
+            mid = (left + right) // 2
+            mid_count = operation_count(mid)
+            if mid_count == k:
+                return mid+1, 0
+            if mid_count < k:
+                left = mid + 1
+                continue
+            mid_minus_one_count = operation_count(mid - 1)
+            if mid_minus_one_count <= k:
+                return mid, (k - mid_minus_one_count)
+            right = mid - 1
 
-        return length, (k - last_allocated)
+        return length, (k - operation_count(length - 1))
 
 
 if __name__ == "__main__":
     s = Solution()
+    nums = [5,1]
+    k = 2
+    multiplier = 3
+    result = s.getFinalState(nums, k, multiplier)
+    assert result == [5,9]
+
     nums = [2,1,3,5,6]
     k = 5
     multiplier = 2
@@ -103,5 +117,4 @@ if __name__ == "__main__":
     k = 1000000000
     multiplier = 3
     result = s.getFinalState(nums, k, multiplier)
-    print('result:', result)
     assert result == [869770420,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809,623256809]
