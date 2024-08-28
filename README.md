@@ -4,6 +4,34 @@
 
 ## 刷题记录
 
+### 2024 年 LeetCode Weekly Contest 刷题记录
+
+#### Weekly Contest 412: 2024-08-25
+
+- 2024-08-25: [Weekly Contest 412][w412]
+  - [x] [3264. Final Array State After K Multiplication Operations I][3264]
+  - [x] [3265. Count Almost Equal Pairs I][3265]
+  - [x] [3266. Final Array State After K Multiplication Operations II][3266]
+  - [ ] [3267. Count Almost Equal Pairs II][3267]
+
+- 2024-08-18: [Weekly Contest 411][w411]
+  - [x] [3258. Count Substrings That Satisfy K-Constraint I][3258]
+  - [x] [3259. Maximum Energy Boost From Two Drinks][3259]
+  - [x] [3260. Find the Largest Palindrome Divisible by K][3260]
+  - [ ] [3261. Count Substrings That Satisfy K-Constraint II][3261]
+
+- 2024-08-04: [Weekly Contest 409][w409]
+  - [x] [3242. Design Neighbor Sum Service][3242]
+  - [x] [3243. Shortest Distance After Road Addition Queries I][3243]
+  - [ ] [3244. Shortest Distance After Road Addition Queries II][3244]
+  - [ ] [3245. Alternating Groups III][3245]
+
+- 2024-07-28: [Weekly Contest 408][w408]
+  - [x] [3232. Find if Digit Game Can Be Won][3232]
+  - [x] [3233. Find the Count of Numbers Which Are Not Special][3233]
+  - [ ] [3234. Count the Number of Substrings With Dominant Ones][3234]
+  - [ ] [3235. Check if the Rectangle Corner Is Reachable][3235]
+
 ### 2024 年 LeetCode 75 刷题记录
 
 - 2024-04-10: [1071. Greatest Common Divisor of Strings][1071]
@@ -67,3 +95,23 @@
   [1419]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/
   [1071]: https://leetcode.com/problems/greatest-common-divisor-of-strings/
   [1041]: https://leetcode.com/problems/robot-bounded-in-circle/
+  [w408]: https://leetcode.com/contest/weekly-contest-408/
+  [3232]: https://leetcode.com/problems/find-if-digit-game-can-be-won/description/
+  [3233]: https://leetcode.com/problems/find-the-count-of-numbers-which-are-not-special/description/
+  [3234]: https://leetcode.com/problems/count-the-number-of-substrings-with-dominant-ones/description/
+  [3235]: https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/description/
+  [w409]: https://leetcode.com/contest/weekly-contest-409/
+  [3242]: https://leetcode.com/problems/design-neighbor-sum-service/description/
+  [3243]: https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/description/
+  [3244]: https://leetcode.com/problems/shortest-distance-after-road-addition-queries-ii/description/
+  [3245]: https://leetcode.com/problems/alternating-groups-iii/description/
+  [w411]: https://leetcode.com/contest/weekly-contest-411/
+  [3258]: https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-i/description/
+  [3259]: https://leetcode.com/problems/maximum-energy-boost-from-two-drinks/description/
+  [3260]: https://leetcode.com/problems/find-the-largest-palindrome-divisible-by-k/description/
+  [3261]: https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-ii/description/
+  [w412]: https://leetcode.com/contest/weekly-contest-412/
+  [3264]: https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/description/
+  [3265]: https://leetcode.com/problems/count-almost-equal-pairs-i/description/
+  [3266]: https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-ii/description/
+  [3267]: https://leetcode.com/problems/count-almost-equal-pairs-ii/description/
