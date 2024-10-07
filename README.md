@@ -4,9 +4,14 @@
 
 ## 刷题记录
 
-### 2024 年 LeetCode Weekly Contest 刷题记录
+### 2024 年 LeetCode Biweekly Contest 刷题记录
 
-#### Weekly Contest 412: 2024-08-25
+- 2024-09-29: [Biweekly Contest 140][b140]
+  - [x] [3300. Minimum Element After Replacement With Digit Sum][3300]
+  - [x] [3301. Maximize the Total Height of Unique Towers][3301]
+  - [x] [3302. Find the Lexicographically Smallest Valid Sequence][3302]（[题解][3302s]）
+
+### 2024 年 LeetCode Weekly Contest 刷题记录
 
 - 2024-08-25: [Weekly Contest 412][w412]
   - [x] [3264. Final Array State After K Multiplication Operations I][3264]
@@ -115,3 +120,8 @@
   [3265]: https://leetcode.com/problems/count-almost-equal-pairs-i/description/
   [3266]: https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-ii/description/
   [3267]: https://leetcode.com/problems/count-almost-equal-pairs-ii/description/
+  [b140]: https://leetcode.com/contest/biweekly-contest-140/
+  [3300]: https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/description/
+  [3301]: https://leetcode.com/problems/maximize-the-total-height-of-unique-towers/description/
+  [3302]: https://leetcode.com/problems/find-the-lexicographically-smallest-valid-sequence/description/
+  [3302s]: ./biweekly_contest/biweekly-contest-140/q3-find-the-lexicographically-smallest-valid-sequence/solution.md
