@@ -13,17 +13,14 @@ const int modulo = 1000000007;
 class Solution {
   public:
     int lengthAfterTransformations(string s, int t) {
-      int r = t % 26;
       vector<int> counts = count_letter(s);
-      int len = accumulate(counts.begin(), counts.end(), 0);
-      // 计算时刻 r 的长度
-      len += accumulate(counts.end() - r, counts.end(), 0);
-      int q = t / 26;
-      for (int i = 0; i < q; i++) {
-        len = (len * 2) % modulo;
+      vector<int> lens(t+1, 0);
+      init_lens(lens, counts);
+      for (int i = letter_num; i <= t; i++) {
+        lens[i] = (lens[i- letter_num] + lens[i - letter_num + 1]) % modulo;
       }
 
-      return len;
+      return lens[t];
     }
 
     // 统计字符串 26 个字母分别有多少个
@@ -34,13 +31,26 @@ class Solution {
       }
       return counts;
     }
+
+    // 初始化 T = 0 ~ min(26,t) 时刻的长度
+    void init_lens(vector<int> &lens, vector<int> &counts) {
+      lens[0] = accumulate(counts.begin(), counts.end(), 0);
+      int init_len = (lens.size() > letter_num) ? letter_num : lens.size();
+      for (int i = 1; i < init_len; i++) {
+        lens[i] = lens[i-1] + counts[letter_num - i];
+      }
+    }
 };
 
 int main() {
   auto s = Solution();
+  int result;
 
-  assert(s.lengthAfterTransformations("abcyy", 2));
-  assert(s.lengthAfterTransformations("azbk", 1));
+  result = s.lengthAfterTransformations("jqktcurgdvlibczdsvnsg", 7517);
+  assert(result == 79033769);
+
+  assert(s.lengthAfterTransformations("abcyy", 2) == 7);
+  assert(s.lengthAfterTransformations("azbk", 1) == 5);
 
   return 0;
 }
