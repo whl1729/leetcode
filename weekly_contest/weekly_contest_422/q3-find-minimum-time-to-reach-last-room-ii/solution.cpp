@@ -31,7 +31,7 @@ public:
           Point cur = to_visit_points.front();
           vector<Point> neighbors = get_neighbors(cur, row, collum);
           for (const auto &n: neighbors) {
-            if (reached_times[n.x][n.y] == -1 || reached_times[n.x][n.y] > reached_times[cur.x][cur.y] + move_times[cur.x][cur.y]) {
+            if (reached_times[n.x][n.y] == -1 || (reached_times[n.x][n.y] > max(reached_times[cur.x][cur.y] + move_times[cur.x][cur.y], start_times[n.x][n.y] + 1))) {
               reached_times[n.x][n.y] = max(reached_times[cur.x][cur.y], start_times[n.x][n.y]) + move_times[cur.x][cur.y];
               // 移动时间在 1 或 2 中交替取值
               move_times[n.x][n.y] = 3 - move_times[cur.x][cur.y];
