@@ -1,4 +1,5 @@
 #include <cassert>
+#include <climits>
 #include <queue>
 #include <vector>
 
@@ -12,11 +13,19 @@ struct Point {
 class Solution {
   public:
     int minTimeToReach(vector<vector<int>>& start_times) {
-        int row = start_times.size();
-        int collum = start_times[0].size();
+        row = start_times.size();
+        collum = start_times[0].size();
 
-        // 记录每个点的最小到达时间
-        vector<vector<int>> reached_times(row, vector<int>(collum, -1));
+        // 保存每个点的最小到达时间
+        min_reached_times = start_times;
+        for (int i = 0; i < row; i++) {
+          for (int j = 0; j < collum; j++) {
+            min_reached_times[i][j] += (i + j) % 2 == 0 ? 2 : 1;
+          }
+        }
+
+        // 记录每个点的到达时间
+        reached_times = vector<vector<int>>(row, vector<int>(collum, INT_MAX));
         reached_times[0][0] = 0;
 
         // 接下来需要访问的点
@@ -26,11 +35,13 @@ class Solution {
         while (!to_visit_points.empty()) {
           Point cur = to_visit_points.front();
           int move_time = (cur.x + cur.y) % 2 == 0 ? 1 : 2;
-          int next_reached_time = reached_times[cur.x][cur.y] + move_time;
-          vector<Point> neighbors = get_neighbors(cur, row, collum, move_time, start_times, reached_times);
-          for (const auto &n: neighbors) {
-            if (reached_times[n.x][n.y] == -1 || (reached_times[n.x][n.y] > next_reached_time)) {
-              reached_times[n.x][n.y] = max(next_reached_time, start_times[n.x][n.y] + move_time);
+          int cur_reached_time = reached_times[cur.x][cur.y] + move_time;
+          update_neighbors(cur);
+          for (int i = 0; i < neighbor_cnt; i++) {
+            const Point &n = neighbors[i];
+            int n_reached_time = max(cur_reached_time, min_reached_times[n.x][n.y]);
+            if (reached_times[n.x][n.y] > n_reached_time) {
+              reached_times[n.x][n.y] = n_reached_time;
               to_visit_points.push(n);
             }
           }
@@ -40,22 +51,29 @@ class Solution {
         return reached_times[row - 1][collum - 1];
     }
 
-    vector<Point> get_neighbors(const Point &p, int row, int collum, int move_time, const vector<vector<int>> &start_times, const vector<vector<int>> &reached_times) {
-      vector<Point> neighbor;
-      if (p.x > 0 && reached_times[p.x - 1][p.y] != start_times[p.x - 1][p.y] + move_time) {
-        neighbor.push_back(Point{p.x - 1, p.y});
+    void update_neighbors(const Point &p) {
+      neighbor_cnt = 0;
+      if (p.x > 0) {
+        neighbors[neighbor_cnt++] = Point{p.x - 1, p.y};
       }
-      if (p.x < row - 1 && reached_times[p.x + 1][p.y] != start_times[p.x + 1][p.y] + move_time) {
-        neighbor.push_back(Point{p.x + 1, p.y});
+      if (p.x < row - 1) {
+        neighbors[neighbor_cnt++] = Point{p.x + 1, p.y};
       }
-      if (p.y > 0 && reached_times[p.x][p.y - 1] != start_times[p.x][p.y - 1] + move_time) {
-        neighbor.push_back(Point{p.x, p.y - 1});
+      if (p.y > 0) {
+        neighbors[neighbor_cnt++] = Point{p.x, p.y - 1};
       }
-      if (p.y < collum - 1  && reached_times[p.x][p.y + 1] != start_times[p.x][p.y + 1] + move_time) {
-        neighbor.push_back(Point{p.x, p.y + 1});
+      if (p.y < collum - 1) {
+        neighbors[neighbor_cnt++] = Point{p.x, p.y + 1};
       }
-      return neighbor;
     }
+  
+  private:
+    int row;
+    int collum;
+    int neighbor_cnt;
+    vector<Point> neighbors = vector<Point>(4);
+    vector<vector<int>> reached_times;
+    vector<vector<int>> min_reached_times;
 };
 
 int main() {
