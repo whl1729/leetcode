@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cassert>
 #include <numeric>
 #include <vector>
@@ -8,16 +9,27 @@ class Solution {
   public:
     bool isZeroArray(vector<int>& nums, vector<vector<int>>& queries) {
       int size = nums.size();
-      vector<int> decrements(size);
-      int query_count = queries.size();
-      for (int i = 0; i < query_count; i++) {
-        for (int j = queries[i][0]; j <= queries[i][1]; j++) {
-          decrements[j]++;
-        }
+      // 差分数组
+      vector<int> diffs(size+1, 0);
+      diffs[0] = nums[0];
+      for (int i = 1; i < size; i++) {
+        diffs[i] = nums[i] - nums[i-1];
       }
 
-      for (int i = 0; i < size; i++) {
-        if (decrements[i] < nums[i]) {
+      int query_count = queries.size();
+      for (int i = 0; i < query_count; i++) {
+        diffs[queries[i][0]]--;
+        diffs[queries[i][1] + 1]++;
+      }
+
+      if (diffs[0] > 0) {
+        return false;
+      }
+
+      vector<int> result = diffs;
+      for (int i = 1; i < size; i++) {
+        result[i] = result[i-1] + diffs[i];
+        if (result[i] > 0) {
           return false;
         }
       }
